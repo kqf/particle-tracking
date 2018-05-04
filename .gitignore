@@ -1,0 +1,9 @@
+# Exclude data-files
+submission.csv.gz
+*.csv
+*.gz
+*.tar.gz
+
+# Exclude os files
+*.pyc
+.DS_Store
