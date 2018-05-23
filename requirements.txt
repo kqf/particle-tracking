@@ -1,0 +1,7 @@
+trackml # Official library for this competition
+keras
+numpy
+pandas
+scikit-learn
+tensorflow
+pytest

@@ -3,7 +3,9 @@ submission.csv.gz
 *.csv
 *.gz
 *.tar.gz
+*.zip
 
 # Exclude os files
+.python-version
 *.pyc
 .DS_Store
