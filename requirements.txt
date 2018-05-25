@@ -1,4 +1,4 @@
-trackml # Official library for this competition
+git+https://github.com/LAL/trackml-library # Official library for this competition
 keras
 numpy
 pandas

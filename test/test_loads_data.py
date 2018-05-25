@@ -19,13 +19,3 @@ class TestInputData(unittest.TestCase):
 
         print('Truth')
         print(truth.head())
-
-    def test_test_sample(self):
-        hits, cells = load_event(
-            "data/test/event000000070", parts=['hits', 'cells']
-        )
-        print('Hits')
-        print(hits.head())
-
-        print('Cells')
-        print(cells.head())
