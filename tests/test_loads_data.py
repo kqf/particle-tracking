@@ -1,11 +1,9 @@
-from trackml.dataset import load_event
-
 
 # NB: Use this sort of tests to check the dataset
-def test_data():
-    hits, cells, particles, truth = load_event(
-        "data/train_100_events/event000001064"
-    )
+
+
+def test_data(first_event):
+    event_id, hits, cells, particles, truth = first_event
     print('Hits')
     print(hits.head())
 
