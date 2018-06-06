@@ -15,6 +15,10 @@ def plot_true(hits):
 def test_training_set(training_set):
     # Event loop
     for event_id, hits, cells, particles, truth in training_set:
-        print(truth.particle_id.count())
-        print(len(truth))
-        plot_true(truth)
+        mc_particles = truth[truth["particle_id"] != 0]
+        track_lengths = mc_particles[["particle_id", "weight"]].groupby(
+            "particle_id",
+            as_index=False).count()
+        largest = track_lengths.sort_values("weight")[-4:]["particle_id"]
+        to_plot = truth[truth["particle_id"].isin(largest)]
+        plot_true(to_plot)
