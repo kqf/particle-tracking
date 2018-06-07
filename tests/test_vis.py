@@ -6,13 +6,13 @@ def plot_true(hits):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(hits.tx, hits.ty, hits.tz)
-    ax.set_xlabel('X Label')
-    ax.set_ylabel('Y Label')
-    ax.set_zlabel('Z Label')
+    ax.set_xlabel('X coordinate')
+    ax.set_ylabel('Y coordinate')
+    ax.set_zlabel('Z coordinate')
     plt.show()
 
 
-def test_training_set(training_set):
+def test_visualize(training_set):
     # Event loop
     for event_id, hits, cells, particles, truth in training_set:
         mc_particles = truth[truth["particle_id"] != 0]
