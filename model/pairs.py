@@ -1,9 +1,25 @@
 import numpy as np
-from sklearn.linear_model import SGDClassifier
+from keras.wrappers.scikit_learn import KerasClassifier
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.optimizers import Adam
+
+
+def create_model(n_features=10):
+    model = Sequential()
+    model.add(Dense(8, activation='relu', input_shape=(n_features,)))
+    model.add(Dense(4, activation='relu'))
+    model.add(Dense(2, activation='relu'))
+    model.add(Dense(1, activation='sigmoid'))
+    model.compile(loss=['binary_crossentropy'],
+                  optimizer=Adam(lr=10e-3), metrics=['accuracy'])
+    return model
 
 
 def build_model():
-    return SGDClassifier()
+    return KerasClassifier(create_model,
+                           batch_size=8000, epochs=1, verbose=2,
+                           validation_split=0.05, shuffle=True)
 
 
 def combinations(x, n=2):
