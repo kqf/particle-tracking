@@ -7,9 +7,9 @@ from keras.optimizers import Adam
 
 def create_model(n_features=10):
     model = Sequential()
-    model.add(Dense(8, activation='relu', input_shape=(n_features,)))
+    model.add(Dense(10, activation='relu', input_shape=(n_features,)))
+    model.add(Dense(6, activation='relu'))
     model.add(Dense(4, activation='relu'))
-    model.add(Dense(2, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
     model.compile(loss=['binary_crossentropy'],
                   optimizer=Adam(lr=10e-3), metrics=['accuracy'])
