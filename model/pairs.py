@@ -12,13 +12,13 @@ def create_model(n_features=10):
     model.add(Dense(4, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
     model.compile(loss=['binary_crossentropy'],
-                  optimizer=Adam(lr=10e-3), metrics=['accuracy'])
+                  optimizer=Adam(lr=10e-4), metrics=['accuracy'])
     return model
 
 
 def build_model():
     return KerasClassifier(create_model,
-                           batch_size=8000, epochs=1, verbose=2,
+                           batch_size=2000, epochs=4,
                            validation_split=0.05, shuffle=True)
 
 
