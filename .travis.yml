@@ -14,4 +14,4 @@ install:
 script:
   - kaggle competitions download -c trackml-particle-identification -f train_sample.zip -p data/
   - unar data/train_sample.zip -o data/
-  - pytest -s
+  - pytest

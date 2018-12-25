@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 
 def plot_true(hits):
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
+    ax = fig.add_subplot(111, projection="3d")
     ax.scatter(hits.tx, hits.ty, hits.tz)
-    ax.set_xlabel('X coordinate')
-    ax.set_ylabel('Y coordinate')
-    ax.set_zlabel('Z coordinate')
+    ax.set_xlabel("X coordinate")
+    ax.set_ylabel("Y coordinate")
+    ax.set_zlabel("Z coordinate")
     plt.show()
 
 

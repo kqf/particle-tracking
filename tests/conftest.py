@@ -2,7 +2,7 @@ import pytest
 import itertools
 from trackml.dataset import load_dataset
 
-TRAIN_DATASET = 'data/train_100_events'
+TRAIN_DATASET = "data/train_100_events"
 
 
 @pytest.fixture()

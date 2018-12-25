@@ -22,4 +22,4 @@ def test_training_set(training_set):
         dataset_scores.append(score)
         print("Score for event %d: %.3f" % (event_id, score))
 
-    print('Mean score: %.3f' % (np.mean(dataset_scores)))
+    print("Mean score: %.3f" % (np.mean(dataset_scores)))

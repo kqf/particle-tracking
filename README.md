@@ -2,3 +2,10 @@
 
 [Particle tracking competition](https://www.kaggle.com/c/trackml-particle-identification/) is a good challenge for clustering algorithms.
 The associated dataset is huge, therefore it's good for self-learning/explorations. No submission has been made due to limited CPU resources.
+
+## Install
+See CI configuration files how to setup the environment.
+```
+pip install -r requirements.txt
+
+```

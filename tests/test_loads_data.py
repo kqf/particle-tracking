@@ -4,14 +4,14 @@
 
 def test_data(first_event):
     event_id, hits, cells, particles, truth = first_event
-    print('Hits')
+    print("Hits")
     print(hits.head())
 
-    print('Cells')
+    print("Cells")
     print(cells.head())
 
-    print('Particles')
+    print("Particles")
     print(particles.head())
 
-    print('Truth')
+    print("Truth")
     print(truth.head())
